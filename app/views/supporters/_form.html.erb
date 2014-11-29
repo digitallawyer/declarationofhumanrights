@@ -12,21 +12,27 @@
   <% end %>
 
   <div class="field">
-    <p>Name</p>
+    <p>Your Name</p>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <p>Country</p>
+    <p>Country of Citizenship</p>
     <%= country_select("supporter", "country") %>
   </div>
   <div class="field">
-    <p>Comment (optional)</p>
+    <p>Leave a Comment</p>
     <%= f.text_area :comment %>
+    <div class="lg-form__input-footer">
+    <p><strong>Optional</strong>&nbsp;Why do you think the Universal Declaration of Human Rights is important?</p>
+    </div>
   </div>
-  <div class="field">
+<!--   <div class="field">
     <p>Email (optional)</p>
     <%= f.text_field :email %>
-  </div>
+    <div class="lg-form__input-footer">
+    <p>Why do you think the Universal Declaration of Human Rights is important?</p>
+    </div>
+  </div> -->
   <div class="field" style="display:none">
     <p>Signing Date</p>
     <%= f.date_select :signing_date %>

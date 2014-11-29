@@ -4,7 +4,8 @@
         <div class="lg-card__header">
           <div class="lg-has-avatar__tiny">
             <div class="lg-avatar__tiny"><img src="/flags/<%= supporter.country %>.png" height="120%" style="margin-top:-10px; height:160%; width:105%; "></div>
-            <div class="lg-card__title-primary"><%= supporter.name %></div>
+            <div class="lg-card__title-primary"><%= supporter.name %><% if supporter.signing_date.present? %>, <%= supporter.country %>
+                <% end %></div>
             <div class="lg-card-flags__wrapper">
               <div class="lg-card-flag" style="margin-top:-10px;">
                 <% if supporter.signing_date.present? %>
@@ -27,11 +28,26 @@
           </div>
         <div class="lg-card__content" style="margin-top: -20px; margin-left:44px;"><p class="lg-font-size__small"><%= supporter.comment %></div>
       </div>
-      
-    <% end %>
+        
 
+    <% end %>
+<br>  
+<%= paginate @supporters %>
 <br>
 <!-- <%= link_to 'New Supporter', new_supporter_path %> -->
 </div>
-<div class="lg-workspace__nav">
+<div class="lg-workspace__nav lg-position__static">
+    <h1 class="lg-workspace__nav-section-header">You can also</h1>
+    <div class="lg-workspace__nav-item">
+        <a class="lg-workspace__nav-link" href="/declaration/preamble"> Read the Text</a>
+    </div>
+    <div class="lg-workspace__nav-item">
+        <a class="lg-workspace__nav-link" href="/home/history"> Read the History</a>
+    </div>
+        <div class="lg-workspace__nav-item">
+        <a class="lg-workspace__nav-link" href="/declaration/sign"> Become a Signatory</a>
+    </div>
+</div>        
+
+</div>        
 </div>

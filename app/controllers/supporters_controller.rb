@@ -4,7 +4,7 @@ class SupportersController < ApplicationController
   # GET /supporters
   # GET /supporters.json
   def index
-    @supporters = Supporter.all
+    @supporters = Supporter.page(params[:page]).per(50)
   end
 
   # GET /supporters/1
