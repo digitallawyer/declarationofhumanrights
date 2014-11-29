@@ -3,17 +3,16 @@
 #fb-root
 
 .lg-workspace__content.lg-bg__content
-    h1.lg-header__a
-      a#ap name="ap" 
-      | The Universal Declaration of Human Rights
-    h1.lg-header__b
-      a#a3 name="a3" 
-      | Article 3.
-    p
-      | Everyone has the right to life, liberty and security of person.
-    hr
-    .da-all
-      .da1-da3
-        =render "comments"
-      .da5-da6
-        p test
+		h1.lg-header__b
+			a#a3 name="a3" 
+			| Article 3.
+		p
+			| Everyone has the right to life, liberty and security of person.
+		br
+		.lg-font-size__small-x
+			a.lg-button__gray.lg-button__outline style="margin-right:10px" href="a2"
+				| Previous
+			a.lg-button__gray.lg-button__outline href="a4"
+				| Next
+		br
+		=render "interaction"
