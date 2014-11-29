@@ -6456,8 +6456,8 @@ html, body {
 @media (min-width: 766px) {
   /* line 7, /var/www/lawgives/releases/1/app/assets/stylesheets/sass/template/tiles/page-header-footer/_page-header.sass */
   .lg-page-header__wrapper:not(.__small-padding), .lg-page-header__wrapper-small:not(.__small-padding) {
-    padding-top: 14.4em;
-    padding-bottom: 11.2em;
+    padding-top: 7.2em;
+    padding-bottom: 5.6em;
   }
   /* line 10, /var/www/lawgives/releases/1/app/assets/stylesheets/sass/template/tiles/page-header-footer/_page-header.sass */
   .__small-padding.lg-page-header__wrapper, .__small-padding.lg-page-header__wrapper-small {
