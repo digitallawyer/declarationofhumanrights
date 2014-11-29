@@ -1,35 +1,33 @@
 <div class="lg-workspace__content">
-
-<h1>Listing supporters</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Country</th>
-<!--       <th>Email</th>
- -->      <th>Comment</th>
-      <th>Signing date</th>
-<!--       <th colspan="3"></th> -->
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @supporters.each do |supporter| %>
-      <tr>
-        <td><%= supporter.name %></td>
-        <td><%= supporter.country %></td>
-<!--         <td><%= supporter.email %></td>
- -->        <td><%= supporter.comment %></td>
-        <td><%= supporter.signing_date %></td>
-<!--         <td><%= link_to 'Show', supporter %></td>
-        <td><%= link_to 'Edit', edit_supporter_path(supporter) %></td>
-        <td><%= link_to 'Destroy', supporter, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
-      </tr>
+  <% @supporters.each do |supporter| %>
+      <div class="section lg-card__wrapper __static">
+        <div class="lg-card__header">
+          <div class="lg-has-avatar__tiny">
+            <div class="lg-avatar__tiny"><img src="/flags/<%= supporter.country %>.png" height="120%" style="margin-top:-10px; height:160%; width:105%; "></div>
+            <div class="lg-card__title-primary"><%= supporter.name %></div>
+            <div class="lg-card-flags__wrapper">
+              <div class="lg-card-flag" style="margin-top:-10px;">
+                <%= supporter.signing_date %>
+              </div>
+<!--               <div class="lg-card-flag" style="margin-top:-10px;">
+                <%= link_to 'Show', supporter %>
+              </div>
+              <div class="lg-card-flag" style="margin-top:-10px;">
+                <%= link_to 'Edit', edit_supporter_path(supporter) %>
+              </div>
+              <div class="lg-card-flag" style="margin-top:-10px;">
+                <%= link_to 'Destroy', supporter, method: :delete, data: { confirm: 'Are you sure?' } %>
+              </div> -->
+            </div>
+            </div>
+          </div>
+        <div class="lg-card__content" style="margin-top: -20px; margin-left:44px;"><p class="lg-font-size__small"><%= supporter.comment %></div>
+      </div>
+      
     <% end %>
-  </tbody>
-</table>
 
 <br>
 <!-- <%= link_to 'New Supporter', new_supporter_path %> -->
+</div>
+<div class="lg-workspace__nav">
 </div>
