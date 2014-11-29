@@ -1,0 +1,32 @@
+=render "nav"
+
+javascript:
+  | (function(d, s, id) {
+    | var js, fjs = d.getElementsByTagName(s)[0];
+    | if (d.getElementById(id)) return;
+    | js = d.createElement(s); js.id = id;
+    | js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=314456832085717&version=v2.0";
+    | fjs.parentNode.insertBefore(js, fjs);
+  | }(document, 'script', 'facebook-jssdk'));
+
+
+#fb-root
+
+.lg-workspace__content.lg-bg__content
+  h2.lg-header__b
+    a#ap name="ap" 
+    | Preamble
+  p Whereas recognition of the inherent dignity and of the equal and  inalienable rights of all members of the human family is the foundation  of freedom, justice and peace in the world,
+  p Whereas disregard and contempt for human rights have resulted in  barbarous acts which have outraged the conscience of mankind, and the  advent of a world in which human beings shall enjoy freedom of speech  and belief and freedom from fear and want has been proclaimed as the  highest aspiration of the common people,
+  p Whereas it is essential, if man is not to be compelled to have  recourse, as a last resort, to rebellion against tyranny and  oppression, that human rights should be protected by the rule of law,
+  p Whereas it is essential to promote the development of friendly relations between nations,
+  p Whereas the peoples of the United Nations have in the Charter  reaffirmed their faith in fundamental human rights, in the dignity and  worth of the human person and in the equal rights of men and women and  have determined to promote social progress and better standards of life  in larger freedom,
+  p Whereas Member States have pledged themselves to achieve, in  co-operation with the United Nations, the promotion of universal  respect for and observance of human rights and fundamental freedoms,
+  p Whereas a common understanding of these rights and freedoms is of  the greatest importance for the full realization of this pledge,
+  p
+    strong> Now, Therefore THE GENERAL ASSEMBLY proclaims THIS UNIVERSAL DECLARATION OF HUMAN RIGHTS
+    | as a common standard of achievement for all peoples and all nations, to  the end that every individual and every organ of society, keeping this  Declaration constantly in mind, shall strive by teaching and education  to promote respect for these rights and freedoms and by progressive  measures, national and international, to secure their universal and  effective recognition and observance, both among the peoples of Member  States themselves and among the peoples of territories under their  jurisdiction.
+  .lg-font-size__small-x
+    a.lg-button__gray.lg-button__outline href="a1"
+      | Next
+  =render "interaction"

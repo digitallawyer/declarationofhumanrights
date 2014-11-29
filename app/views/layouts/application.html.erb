@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Declarationofhumanrights</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&appId=314456832085717&version=v2.0";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+	</script>
+
+</head>
+<body>
+<header class="lg-app-header__wrapper">
+  <div class="lg-app-header">
+    <div class="lg-app-header__logo dropdown">
+      <a class="lg-app-nav__link" href="/" title="Declaration"><img alt="Startup" src="https://dl.dropboxusercontent.com/u/925640/lawgives-logo-symbol%40200w.png">&nbsp;Declaration of Human Rights</img></a>
+    </div>
+    <nav class="lg-app-nav">
+      <div class="lg-app-nav__list lg-app-nav__list-account-secondary">
+        <div class="lg-app-nav__item">
+          <a class="lg-app-nav__link" href="/lawyers/communities"><span class="lg-app-nav__icon ss-gizmo ss-file"></span><span class="lg-app-nav__label">Link</span></a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
+<main class="lg-document__wrapper">
+
+<%= yield %>
+</main>
+</body>
+</html>
