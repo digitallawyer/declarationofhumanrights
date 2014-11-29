@@ -17,3 +17,15 @@
 p {
 	font-size: 1.375em;
 }
+
+@media screen and (min-width: 766px) {
+  .lg-workspace__nav { display: block; }  /* show it on small screens */
+}
+
+@media screen and (min-width: 0px) and (max-width: 765px) {
+  .lg-workspace__nav { display: none; }   /* hide it elsewhere */
+}
+
+#error_explanation {
+	color: red;
+}

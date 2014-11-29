@@ -1,0 +1,39 @@
+<%= form_for(@supporter) do |f| %>
+  <% if @supporter.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@supporter.errors.count, "error") %> prohibited this supporter from being saved:</h2>
+
+      <ul>
+      <% @supporter.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <p>Name</p>
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <p>Country</p>
+    <%= country_select("supporter", "country") %>
+  </div>
+  <div class="field">
+    <p>Comment (optional)</p>
+    <%= f.text_area :comment %>
+  </div>
+  <div class="field">
+    <p>Email (optional)</p>
+    <%= f.text_field :email %>
+  </div>
+  <div class="field" style="display:none">
+    <p>Signing Date</p>
+    <%= f.date_select :signing_date %>
+  </div>
+  </br>
+  <div class="lg-header__d">By signing, I accept this Universal Declaration of Human Rights as a common standard of achievement for all peoples and all nations, and commit to promoting universal respect for these rights and freedoms.</div>
+  <div class="actions">
+      <%= f.submit "Sign This Document", :class => "lg-button__gold lg-button__filled" %>
+  </div>
+<% end %>

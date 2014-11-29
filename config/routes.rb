@@ -1,9 +1,14 @@
 Rails.application.routes.draw do
+  resources :supporters
+
   get 'home/index'
 
   get 'home/about'
 
   get 'declaration/text'
+  get 'declaration/sign'
+
+
   get 'declaration/preamble'
   get 'declaration/a1'
   get 'declaration/a2'

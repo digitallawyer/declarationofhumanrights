@@ -2,6 +2,9 @@ class DeclarationController < ApplicationController
   def text
   end
 
+  def sign
+  end
+
   def preamble
   end
 

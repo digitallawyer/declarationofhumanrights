@@ -1,0 +1,35 @@
+<div class="lg-workspace__content">
+
+<h1>Listing supporters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Country</th>
+<!--       <th>Email</th>
+ -->      <th>Comment</th>
+      <th>Signing date</th>
+<!--       <th colspan="3"></th> -->
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @supporters.each do |supporter| %>
+      <tr>
+        <td><%= supporter.name %></td>
+        <td><%= supporter.country %></td>
+<!--         <td><%= supporter.email %></td>
+ -->        <td><%= supporter.comment %></td>
+        <td><%= supporter.signing_date %></td>
+<!--         <td><%= link_to 'Show', supporter %></td>
+        <td><%= link_to 'Edit', edit_supporter_path(supporter) %></td>
+        <td><%= link_to 'Destroy', supporter, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+<!-- <%= link_to 'New Supporter', new_supporter_path %> -->
+</div>
