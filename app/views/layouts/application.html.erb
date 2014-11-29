@@ -15,6 +15,9 @@
 	}(document, 'script', 'facebook-jssdk'));
 	</script>
   <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <%= analytics_init if Rails.env.production? %>
+
 </head>
 <body>
 
