@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'home/about'
 
   get 'home/history'
+  get 'home/media'
 
   get 'declaration/text'
   get 'declaration/sign'
